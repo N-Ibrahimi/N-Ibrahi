@@ -192,6 +192,7 @@ section {
 	padding-right: 25px; 
 	text-align: justify;
 	margin-left: 12px;
+	overflow: auto;
 }
 
 #footer p {
@@ -256,7 +257,13 @@ section {
  	width: 300px;
  	position: relative;
  	margin-top: 25px;
- 	margin-right: 5px;
+ 	margin-right: 10px;
  	margin-left: 10px;
- 	color: #ffe813;
+ 	color: #ffe813;}
 
+#bkg{
+
+	position:relative;
+	margin-left: 80px;
+	margin-right: 10px; 
+}

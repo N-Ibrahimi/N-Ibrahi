@@ -21,8 +21,13 @@
 
 	 function mag() {
   	document.body.style.backgroundColor = "#b300b7";
-  	document.getElementById('container').style.fontFamily = 'comic';
-  	document.getElementById('container').style.color = '#4ceaff';
+  	document.getElementById('container').style.fontFamily = 'Loma';
+  	document.getElementById('container').style.fontSize = '13';
+  	document.getElementById('container').style.color = '#ffff4c';
+  	document.getElementById('t1').style.fontFamily = 'chilanka';
+  	document.getElementById('t2').style.fontFamily = 'chilanka';
+  	document.getElementById('t3').style.fontFamily = 'chilanka';
+  
 }
 
 	</script>
@@ -34,7 +39,7 @@
 		<!--header block-->
 			<div >
 			<!-- header text-->
-				<h1> Introduction au Droit </h1> <br/>
+				<h1 id="t1"> Introduction au Droit </h1> <br/>
 				<p class="sous_titre">This site provide some basics informations about law studies, its domaines and judicials termes</p>
 			</div>
 			<!-- header backgrond image -->
@@ -66,7 +71,7 @@
 			<div class="article">
 			<!-- principal text-->
 				<section class="art_1"> 
-					<h2> ESSAI DE DEFINITION DU DROIT (il existe 59 définitions) </h2>
+					<h2 id="t2"> ESSAI DE DEFINITION DU DROIT (il existe 59 définitions) </h2>
 
 			<p> Définition substantielle<br/>
 
@@ -85,7 +90,7 @@
 
 			<section class="art_2">
 
-			<h2>Définition formelle</h2>
+			<h2 id="t3">Définition formelle</h2>
 			Cette approche tend à dire que constitue du Droit, la règle ou la décision qu’une autorité désigne comme étant du Droit. <br/>
 			Les sources habilitées du Droit sont les pouvoirs politiques et leurs infinis démembrements administratifs, les juges également que l’on pourrait voir comme un démembrement de l’Etat. <br/>
 			 <ul> 
@@ -115,8 +120,8 @@
 			<div class="bkg_ch">
 				<fieldset>
 					<legend>Bakground</legend>
-					<label for="bkg"> change the background color</label>
-						<input type="button" value="magenta" id="bkg" onclick="mag();"></button>
+					<label for="bkg"> change style</label>
+						<input type="button" value="change" id="bkg" onclick="mag();"></button>
 
 				</fieldset></div>
 

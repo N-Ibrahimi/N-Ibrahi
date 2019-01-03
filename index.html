@@ -5,7 +5,22 @@
 	<title>The website exercice with HTML & CSS</title>
 	<meta charset="utf-8" lang="fr">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- direction vers le site dalloz dans 20 sec-
+	 <meta http-equiv="refresh" content="20; url=http://www.dalloz.fr"> -->
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<!--java script alert fucntion-->
+	<script type="text/javascript" >	
+	 /*alert("DANS \*20 sec\* \n tu seras dirigé(e) vers le site \*DAllOZ \*\n appuie sur OK");*/
+	 var result=confirm ("Do you want to visit a nice video on Youtube ?");
+	 if(result==true)
+	 	{window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")}
+	 else 
+	 {
+	 	alert("Peut-être la prochaine fois ;) ")
+	 }
+	</script>
+
+	</script>
 </head>
 <body>
 	<div id="container">
@@ -38,11 +53,7 @@
 					<h5> links</h5>
 					<p> here you can put the links, audio files or the social networks links like Facebook, twitter, linkdin etc </p><br/>
 					<br/><br/><br/><br/>
-					<fieldset id="field">
-						<legend> Newsletter</legend>
-					 <label for="newletter"> Mail</label>
-					 <input type="email" name="newletter" id="newletter" placeholder="exemple@exemple.com" />
-				 </fieldset>
+					
 				</section>
 			</div>
 
@@ -88,13 +99,22 @@
 			</div>
 		</div>
 
-
-		<div id="footer" width="100%">
+		<div class="enbas">
+			<div id="footer" width="100%">
 		<!-- footer section-->
 			<p> &copy; copyright N@sim ibR@hImi- tous droits réservés </p><br/>
-			<p> envoyez moi un  <a  href="mailto:naism_ebi@yahoo.com" title="merci beaucoup"> Mail </a> pour contacter et partager vos commentaires sur mon travail 
+			<p> envoyez moi un  <a  href="mailto:naism_ebi@yahoo.com" title="merci beaucoup"> Mail </a> pour contacter et partager vos commentaires sur mon travail </p> 
+			</div>
+			<div class="newsletter">
+					<fieldset >
+						<legend> Newsletter</legend>
+						<label for="newletter"> Mail</label>
+						<input type="email" name="newletter" id="newletter" placeholder="exemple@exemple.com" />
+						<button> envoyer</button>
+				 	</fieldset>
+			</div>
+			
 		</div>
-
 	</div>
 </body>
 </html>

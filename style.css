@@ -9,8 +9,8 @@
 }
 
 body{
-	background-image: url(source/body_bkg.jpg);
-	background-attachment: fixed;
+	/*background-image: url(source/body_bkg.jpg);
+	background-attachment: fixed;*/
 	color: black,
 	font-family: "comic sans MS","Arial", serif;
 	font-size:13px;
@@ -223,15 +223,16 @@ section {
 }
 
  button{ 
- margin-top: 5px; }
+ margin-top: 5px;
+ margin-left: 160px;
+ }
 
  .newsletter{
  	width: 300px;
- 	height: 50px; 
  	position: relative;
- 	margin-top: 20px;
+ 	margin-top: 25px;
  	margin-right: 60px;
- 	margin-left: 25%;
+ 	margin-left: 10px;
  	color: #ffe813;
  }
 
@@ -249,5 +250,13 @@ section {
 	margin-top: 70%;
 	margin-left: 0px;
 	margin-right: 0px;
-	/*
  }
+
+.bkg_ch{
+ 	width: 300px;
+ 	position: relative;
+ 	margin-top: 25px;
+ 	margin-right: 5px;
+ 	margin-left: 10px;
+ 	color: #ffe813;
+

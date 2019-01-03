@@ -13,14 +13,20 @@
 	 /*alert("DANS \*20 sec\* \n tu seras dirigé(e) vers le site \*DAllOZ \*\n appuie sur OK");*/
 	 var result=confirm ("Do you want to visit a nice video on Youtube ?");
 	 if(result==true)
-	 	{window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")}
+	 	{window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");}
 	 else 
 	 {
-	 	alert("Peut-être la prochaine fois ;) ")
+	 	alert("Peut-être la prochaine fois ;)");
 	 }
-	</script>
+
+	 function mag() {
+  	document.body.style.backgroundColor = "#b300b7";
+  	document.getElementById('container').style.fontFamily = 'comic';
+  	document.getElementById('container').style.color = '#4ceaff';
+}
 
 	</script>
+
 </head>
 <body>
 	<div id="container">
@@ -105,14 +111,24 @@
 			<p> &copy; copyright N@sim ibR@hImi- tous droits réservés </p><br/>
 			<p> envoyez moi un  <a  href="mailto:naism_ebi@yahoo.com" title="merci beaucoup"> Mail </a> pour contacter et partager vos commentaires sur mon travail </p> 
 			</div>
+
+			<div class="bkg_ch">
+				<fieldset>
+					<legend>Bakground</legend>
+					<label for="bkg"> change the background color</label>
+						<input type="button" value="magenta" id="bkg" onclick="mag();"></button>
+
+				</fieldset></div>
+
 			<div class="newsletter">
 					<fieldset >
 						<legend> Newsletter</legend>
 						<label for="newletter"> Mail</label>
 						<input type="email" name="newletter" id="newletter" placeholder="exemple@exemple.com" />
-						<button> envoyer</button>
+						<button> envoyer</button><br/>
 				 	</fieldset>
 			</div>
+
 			
 		</div>
 	</div>

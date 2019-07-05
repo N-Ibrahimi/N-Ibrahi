@@ -1,0 +1,77 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+
+<body class="row container">
+    <div class="col-md-4 my-4 bg-light p-2 ml-auto border border-muted rounded">
+        <p>All fields by * are obligatory</p>
+        <p id="error" style="color: red"> </p>
+        <p id="error2" style="color: red"> </p>
+        <script>
+            var parg = document.getElementById("error");
+        </script>
+        <form action="send.php" name="no1" method="post">
+            <p>First name:<span style="color:red">*</span></p>
+            <input type="text" name="fname" onchange="parg.innerHTML =''" oninput="flashname()" required>
+            <p>Last name:<span style="color:red">*</span></p>
+            <input type="text" name="lname" onchange="parg.innerHTML =''"  oninput="flashname()" required>
+            <p>Email:<span style="color:red">*</span></p>
+            <input type="text" name="mail" onchange="parg.innerHTML =''" required>
+            <p>repeat mail:<span style="color:red">*</span></p>
+            <input type="text" name="remal" oninput="verify()" required><br /><br />
+            <input type="submit" onclick="verify()" value="submit">
+        </form>
+    </div>
+    <div class="col-md-4 my-4 p-2">
+        <h2 id="wellcome"> </h2>
+
+    </div>
+
+</body>
+<script>
+    function verify() {
+        var inputs = document.getElementsByTagName("input");
+        for (i = 0; i < inputs.length; i++) {
+            if (inputs[i].value == "") {
+                parg.innerHTML = "You must fill up all requird fields";
+                parg.style.color = "red";
+                break
+            }
+        }
+        if (inputs[2].value !== inputs[3].value ||  inputs[2].value=="" ) {
+            document.getElementById("error2").innerHTML = "Don't match the emails";
+            document.getElementById("error2").style.color="red";
+        } else {
+            document.getElementById("error2").innerHTML = "Emails OK!";
+            document.getElementById("error2").style.color="green";
+        }
+    };
+    
+    function flashname(){
+        var g = document.no1.fname.value;
+        var h = document.no1.lname.value;
+
+        document.getElementById("wellcome").innerHTML= "Hi " + g + " "+ h+ "<br/> Thanks for your registering on our site"
+    }
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+</html>
